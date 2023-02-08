@@ -3,11 +3,6 @@ td {
   border: 1px solid #333;
 }
 
-html {
-  height: 100%;
-}
-
 table {
-  margin: 30px;
-  width: 300px;
+  width: 650px;
 }

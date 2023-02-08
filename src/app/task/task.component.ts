@@ -11,8 +11,11 @@ export class TaskComponent {
   taskToAdd: string = '';
 
   add() {
-    this.tasks.push(this.taskToAdd);
-    this.taskToAdd = '';
+    if(this.taskToAdd !== '') {
+      this.tasks.push(this.taskToAdd);
+      this.taskToAdd = '';
+    }
+
   }
 
   delete(i: number) {

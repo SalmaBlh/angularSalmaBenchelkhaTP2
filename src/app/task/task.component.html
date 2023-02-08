@@ -2,10 +2,10 @@
   <div>
     <h1>To Do List</h1>
     <p>Indiquez la tâche à réaliser.</p>
-    <input type="text" [(ngModel)]="taskToAdd">
+    <input style="width: 600px" [(ngModel)]="taskToAdd">
     <button (click)="add()" type="submit">Ajouter</button>
   </div>
-  <table>
+  <table class="m-auto mt-5">
     <thead>
     <tr>
       <th colspan="1">À faire</th>
@@ -15,8 +15,16 @@
     <tr>
       <td>
           <div *ngFor="let task of tasks; let i = index">
-            <button style="background-color:red; display: inline-block; margin-right: 3px" (click)="delete(i)">-</button>
-            <p style="display: inline-block"> {{ task }} </p>
+            <div class="row">
+              <div class="col">
+                <li style="float: left; margin-left: 15px">
+                  <ul style="display: inline-block"> {{ task }} </ul>
+                </li>
+              </div>
+              <div class="col">
+                <button style="display: inline-block; float:right; margin-right: 15px" (click)="delete(i)">Supprimer</button>
+              </div>
+            </div>
           </div>
       </td>
     </tr>
